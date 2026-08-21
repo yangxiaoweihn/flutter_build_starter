@@ -1,0 +1,10 @@
+src: .
+
+# 开始构建时 备份pubspec.yaml后的文件
+# 如果该文件存在 则该文件会先覆盖pubspec.yaml 再进行后续流程
+# 主要是构建可能依赖了其他会修改pubspec.yaml的builders等
+# 这里作为构建初始 每次都用最新的
+# 默认是 pubspec.zygote.yaml
+output: pubspec.zygote.yaml
+
+config_file: 'xxx.yaml'

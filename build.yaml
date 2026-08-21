@@ -1,0 +1,10 @@
+builders:
+  build_starter_builder:
+    import: "package:flutter_build_starter/builder.dart"
+    builder_factories: [ "buildStarterBuilder" ]
+    # 只是用来触发builder
+    build_extensions: { "pubspec.yaml": [ ".dart_tool/generated/.build_starter_trigger_cache.dart" ] }
+    auto_apply: none # dependents
+    build_to: cache # source
+
+    applies_builders: [ "source_gen|combining_builder" ]
